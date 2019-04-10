@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NUnit3TestAdapter.3.13.0\build\net35\NUnit3TestAdapter.props" Condition="Exists('..\packages\NUnit3TestAdapter.3.13.0\build\net35\NUnit3TestAdapter.props')" />
+  <Import Project="..\packages\NUnit.3.11.0\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.11.0\build\NUnit.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0137F3C4-ADFD-41D1-BC89-1B25F701E030}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WhiteHatSec.UnitTest</RootNamespace>
+    <AssemblyName>WhiteHatSec.UnitTest</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="envdte, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="envdte80, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\PublicAssemblies\envdte80.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.11.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.11.0\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="CultureTest.cs" />
+    <Compile Include="LoginTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuestionAnswerTest.cs" />
+    <Compile Include="SearchVulnTest.cs" />
+    <Compile Include="UploadProjectTest.cs" />
+    <Compile Include="VulnerabilityTraceTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Key.snk" />
+    <None Include="packages.config" />
+    <None Include="WebGoat-master\src\main\resources\log4j.properties" />
+    <None Include="WebGoat-master\src\main\resources\WebGoatLabels_english.properties" />
+    <None Include="WebGoat-master\src\main\resources\WebGoatLabels_german.properties" />
+    <None Include="WebGoat-master\src\main\resources\WebGoatLabels_russian.properties" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WhiteHatSec.Entity\WhiteHatSec.Entity.csproj">
+      <Project>{e453a288-c790-4e37-a220-fa4a4c600d71}</Project>
+      <Name>WhiteHatSec.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WhiteHatSec.Localization.Culture\WhiteHatSec.Localization.Culture.csproj">
+      <Project>{dd49af92-15cd-4f6c-b601-300662c495d4}</Project>
+      <Name>WhiteHatSec.Localization.Culture</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WhiteHatSec.Services\WhiteHatSec.Services.csproj">
+      <Project>{b794d0d5-d33a-4d14-8413-afca13b8a1bc}</Project>
+      <Name>WhiteHatSec.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WhiteHatSec.Shared\WhiteHatSec.Shared.csproj">
+      <Project>{6e7f83d1-4c28-47f6-927e-f33d93b2163e}</Project>
+      <Name>WhiteHatSec.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WhiteHatSec.VSIX\WhiteHatSec.VSIX.csproj">
+      <Project>{3673a0c4-d5c6-4cc2-bd9f-58f9acaa3147}</Project>
+      <Name>WhiteHatSec.VSIX</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="QuestionAnswer.txt" />
+    <Content Include="Resources\11036.txt" />
+    <EmbeddedResource Include="SearchVuln.txt" />
+    <EmbeddedResource Include="Vuln.txt" />
+    <Content Include="WebGoat-master\src\main\java\org\AbstractLesson.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\application\Application.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\application\WebGoatServletListener.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\Catcher.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\controller\About.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\controller\Login.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\controller\Logout.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\controller\Start.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\controller\Welcome.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\HammerHead.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\LessonSource.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\AbstractLesson.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\AccessControlMatrix.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\admin\AdminScreen.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\admin\ProductsAdminScreen.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\admin\RefreshDBScreen.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\admin\ReportCardScreen.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\admin\SummaryReportCardScreen.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\admin\UserAdminScreen.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\admin\ViewDatabase.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\admin\WelcomeAdminScreen.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\BackDoors.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\BasicAuthentication.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\BlindNumericSqlInjection.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\BlindScript.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\BlindStringSqlInjection.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\BypassHtmlFieldRestrictions.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\Category.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\Challenge2Screen.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\ClientSideFiltering\ClientSideFiltering.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\ClientSideValidation.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\CommandInjection.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\ConcurrencyCart.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\CrossSiteScripting\CrossSiteScripting.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\CrossSiteScripting\EditProfile.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\CrossSiteScripting\FindProfile.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\CrossSiteScripting\UpdateProfile.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\CrossSiteScripting\ViewProfile.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\CSRF.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\CsrfPromptByPass.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\CsrfTokenByPass.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\DangerousEval.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\DBCrossSiteScripting\DBCrossSiteScripting.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\DBCrossSiteScripting\UpdateProfile.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\DBSQLInjection\DBSQLInjection.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\DBSQLInjection\Login.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\DOMInjection.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\DOMXSS.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\DOS_Login.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\Encoding.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\FailOpenAuthentication.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\ForcedBrowsing.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\ForgotPassword.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\GoatHillsFinancial\DefaultLessonAction.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\GoatHillsFinancial\DeleteProfile.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\GoatHillsFinancial\EditProfile.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\GoatHillsFinancial\FindProfile.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\GoatHillsFinancial\GoatHillsFinancial.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\GoatHillsFinancial\LessonAction.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\GoatHillsFinancial\ListStaff.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\GoatHillsFinancial\Login.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\GoatHillsFinancial\Logout.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\GoatHillsFinancial\SearchStaff.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\GoatHillsFinancial\UpdateProfile.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\GoatHillsFinancial\ViewProfile.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\HiddenFieldTampering.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\HowToWork.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\HtmlClues.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\HttpBasics.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\HttpOnly.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\HttpSplitting.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\InsecureLogin.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\instructor\CrossSiteScripting\FindProfile_i.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\instructor\CrossSiteScripting\UpdateProfile_i.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\instructor\CrossSiteScripting\ViewProfile_i.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\instructor\DBCrossSiteScripting\RegexMatch.dll" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\instructor\DBCrossSiteScripting\UpdateProfile_i.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\instructor\DBSQLInjection\Login_i.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\instructor\RoleBasedAccessControl\DeleteProfile_i.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\instructor\RoleBasedAccessControl\EditProfile_i.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\instructor\RoleBasedAccessControl\RoleBasedAccessControl_i.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\instructor\RoleBasedAccessControl\UpdateProfile_i.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\instructor\RoleBasedAccessControl\ViewProfile_i.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\instructor\SQLInjection\Login_i.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\instructor\SQLInjection\ViewProfile_i.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\JavaScriptValidation.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\JSONInjection.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\LessonAdapter.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\LogSpoofing.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\MaliciousFileExecution.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\model\Hint.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\model\HttpBasicsModel.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\model\LessonMenuItem.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\model\LessonMenuItemType.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\model\RequestParameter.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\model\SourceListing.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\MultiLevelLogin1.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\MultiLevelLogin2.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\NewLesson.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\OffByOne.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\PasswordStrength.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\PathBasedAccessControl.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\Phishing.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\RandomLessonAdapter.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\ReflectedXSS.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\RemoteAdminFlaw.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\RoleBasedAccessControl\DeleteProfile.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\RoleBasedAccessControl\EditProfile.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\RoleBasedAccessControl\RoleBasedAccessControl.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\RoleBasedAccessControl\UpdateProfile.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\RoleBasedAccessControl\ViewProfile.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\SameOriginPolicyProtection.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\SequentialLessonAdapter.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\SessionFixation.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\SilentTransactions.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\SoapRequest.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\SqlAddData.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\SQLInjection\ListStaff.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\SQLInjection\Login.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\SQLInjection\SQLInjection.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\SQLInjection\ViewProfile.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\SqlModifyData.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\SqlNumericInjection.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\SqlStringInjection.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\StoredXss.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\ThreadSafetyProblem.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\TomcatSetup.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\TraceXSS.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\UncheckedEmail.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\UsefulTools.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\WeakAuthenticationCookie.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\WeakSessionID.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\WelcomeScreen.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\WSDLScanning.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\WsSAXInjection.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\WsSqlInjection.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\XMLInjection.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\lessons\XPATHInjection.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\service\ApplicationService.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\service\BaseService.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\service\CookieService.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\service\DummyService.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\service\ExceptionInfo.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\service\HintService.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\service\LessonMenuService.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\service\LessonPlanService.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\service\LessonTitleService.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\service\ParameterService.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\service\RestartLessonService.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\service\SessionService.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\service\SolutionService.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\service\SourceService.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\servlets\Controller.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\session\Authorization.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\session\Course.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\session\CreateDB.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\session\DatabaseUtilities.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\session\ECSFactory.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\session\Employee.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\session\EmployeeStub.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\session\ErrorScreen.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\session\LessonSession.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\session\LessonTracker.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\session\Parameter.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\session\ParameterNotFoundException.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\session\ParameterParser.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\session\RandomLessonTracker.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\session\Screen.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\session\SequentialLessonTracker.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\session\UnauthenticatedException.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\session\UnauthorizedException.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\session\UserTracker.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\session\ValidationException.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\session\WebgoatContext.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\session\WebgoatProperties.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\session\WebSession.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\util\Exec.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\util\ExecResults.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\util\ExecutionException.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\util\HtmlEncoder.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\util\Interceptor.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\util\ThreadWatcher.java" />
+    <Content Include="WebGoat-master\src\main\java\org\owasp\webgoat\util\WebGoatI18N.java" />
+    <Content Include="WebGoat-master\src\main\resources\New Lesson Instructions.txt" />
+    <Content Include="WebGoat-master\src\main\tomcatconf\tomcat-users.xml" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\NUnit.3.11.0\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.11.0\build\NUnit.props'))" />
+    <Error Condition="!Exists('..\packages\NUnit3TestAdapter.3.13.0\build\net35\NUnit3TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit3TestAdapter.3.13.0\build\net35\NUnit3TestAdapter.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

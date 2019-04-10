@@ -1,0 +1,601 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="whsMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="whsMenuStrip.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="whsMenuStrip.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="whsMenuStrip.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="EnglishToolStripRadioButtonMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 22</value>
+  </data>
+  <data name="EnglishToolStripRadioButtonMenuItem.Text" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="JapaneseToolStripRadioButtonMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 22</value>
+  </data>
+  <data name="JapaneseToolStripRadioButtonMenuItem.Text" xml:space="preserve">
+    <value>Japanese</value>
+  </data>
+  <data name="germanToolStripRadioButtonMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 22</value>
+  </data>
+  <data name="germanToolStripRadioButtonMenuItem.Text" xml:space="preserve">
+    <value>German</value>
+  </data>
+  <data name="languageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 22</value>
+  </data>
+  <data name="languageToolStripMenuItem.Text" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="ImportSentinelResultsToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ImportSentinelResultsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 22</value>
+  </data>
+  <data name="ImportSentinelResultsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Import Sentinel Results</value>
+  </data>
+  <data name="ImportSentinelResultsToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="uploadProjectToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="uploadProjectToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 22</value>
+  </data>
+  <data name="uploadProjectToolStripMenuItem.Text" xml:space="preserve">
+    <value>Upload Project</value>
+  </data>
+  <data name="uploadProjectToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ToolStripRadioButtonRight.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 22</value>
+  </data>
+  <data name="ToolStripRadioButtonRight.Text" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="toolStripRadioButtonBottom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 22</value>
+  </data>
+  <data name="toolStripRadioButtonBottom.Text" xml:space="preserve">
+    <value>Bottom</value>
+  </data>
+  <data name="showSolutionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 22</value>
+  </data>
+  <data name="showSolutionToolStripMenuItem.Text" xml:space="preserve">
+    <value>Display Preferences</value>
+  </data>
+  <data name="GetDetailsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 22</value>
+  </data>
+  <data name="GetDetailsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Get Details</value>
+  </data>
+  <data name="toolStripMenuItem1.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 22</value>
+  </data>
+  <data name="toolStripMenuItem1.Text" xml:space="preserve">
+    <value>Version 1.1</value>
+  </data>
+  <data name="toolStripMenuItemHelp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 22</value>
+  </data>
+  <data name="toolStripMenuItemHelp.Text" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="logOutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 22</value>
+  </data>
+  <data name="logOutMenuItem.Text" xml:space="preserve">
+    <value>Log Out</value>
+  </data>
+  <data name="logOutMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="whiteHatToolStripMenuItem.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="whiteHatToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 21</value>
+  </data>
+  <data name="whiteHatToolStripMenuItem.Text" xml:space="preserve">
+    <value>WhiteHat</value>
+  </data>
+  <data name="whiteHatToolStripMenuItem.ToolTipText" xml:space="preserve">
+    <value>View Menu</value>
+  </data>
+  <data name="whitehatToolStripMenuItem1.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="whitehatToolStripMenuItem1.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="whitehatToolStripMenuItem1.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="whitehatToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 25</value>
+  </data>
+  <data name="whitehatToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Whitehat</value>
+  </data>
+  <data name="whsMenuStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1276, 0</value>
+  </data>
+  <data name="whsMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 25</value>
+  </data>
+  <data name="whsMenuStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="whsMenuStrip.Text" xml:space="preserve">
+    <value>contextMenuStrip</value>
+  </data>
+  <data name="&gt;&gt;whsMenuStrip.Name" xml:space="preserve">
+    <value>whsMenuStrip</value>
+  </data>
+  <data name="&gt;&gt;whsMenuStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;whsMenuStrip.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;whsMenuStrip.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="findVulnsTabPage.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="FindVulnsPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="FindVulnsPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="FindVulnsPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1492, 612</value>
+  </data>
+  <data name="FindVulnsPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;FindVulnsPanel.Name" xml:space="preserve">
+    <value>FindVulnsPanel</value>
+  </data>
+  <data name="&gt;&gt;FindVulnsPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FindVulnsPanel.Parent" xml:space="preserve">
+    <value>findVulnsTabPage</value>
+  </data>
+  <data name="&gt;&gt;FindVulnsPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="findVulnsTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 29</value>
+  </data>
+  <data name="findVulnsTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="findVulnsTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1498, 618</value>
+  </data>
+  <data name="findVulnsTabPage.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="findVulnsTabPage.Text" xml:space="preserve">
+    <value>Manage Vulnerabilities</value>
+  </data>
+  <data name="&gt;&gt;findVulnsTabPage.Name" xml:space="preserve">
+    <value>findVulnsTabPage</value>
+  </data>
+  <data name="&gt;&gt;findVulnsTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;findVulnsTabPage.Parent" xml:space="preserve">
+    <value>WHSTabControl</value>
+  </data>
+  <data name="&gt;&gt;findVulnsTabPage.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="whsFindingTabPage.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="WhsFindingWindow.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="WhsFindingWindow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="WhsFindingWindow.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="WhsFindingWindow.SentinelCookie" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAElTeXN0ZW0sIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0
+        cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5BQEAAAAaU3lzdGVtLk5ldC5Db29raWVD
+        b250YWluZXIGAAAADW1fZG9tYWluVGFibGUPbV9tYXhDb29raWVTaXplDG1fbWF4Q29va2llcxVtX21h
+        eENvb2tpZXNQZXJEb21haW4HbV9jb3VudA5tX2ZxZG5NeURvbWFpbgMAAAAAARxTeXN0ZW0uQ29sbGVj
+        dGlvbnMuSGFzaHRhYmxlCAgICAIAAAAJAwAAAAAQAAAsAQAAFAAAAAAAAAAGBAAAAAAEAwAAABxTeXN0
+        ZW0uQ29sbGVjdGlvbnMuSGFzaHRhYmxlBwAAAApMb2FkRmFjdG9yB1ZlcnNpb24IQ29tcGFyZXIQSGFz
+        aENvZGVQcm92aWRlcghIYXNoU2l6ZQRLZXlzBlZhbHVlcwAAAwMABQULCBxTeXN0ZW0uQ29sbGVjdGlv
+        bnMuSUNvbXBhcmVyJFN5c3RlbS5Db2xsZWN0aW9ucy5JSGFzaENvZGVQcm92aWRlcgjsUTg/AAAAAAoK
+        AwAAAAkFAAAACQYAAAAQBQAAAAAAAAAQBgAAAAAAAAAL
+</value>
+  </data>
+  <data name="WhsFindingWindow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1492, 612</value>
+  </data>
+  <data name="WhsFindingWindow.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;WhsFindingWindow.Name" xml:space="preserve">
+    <value>WhsFindingWindow</value>
+  </data>
+  <data name="&gt;&gt;WhsFindingWindow.Type" xml:space="preserve">
+    <value>WhiteHatSec.VSIX.UserControls.VulnerabilityTrace, WhiteHatSec.VSIX, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c0c2f8dc430a53f0</value>
+  </data>
+  <data name="&gt;&gt;WhsFindingWindow.Parent" xml:space="preserve">
+    <value>whsFindingTabPage</value>
+  </data>
+  <data name="&gt;&gt;WhsFindingWindow.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="whsFindingTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 29</value>
+  </data>
+  <data name="whsFindingTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="whsFindingTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1498, 618</value>
+  </data>
+  <data name="whsFindingTabPage.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="whsFindingTabPage.Text" xml:space="preserve">
+    <value>Debug Vulnerabilities</value>
+  </data>
+  <data name="&gt;&gt;whsFindingTabPage.Name" xml:space="preserve">
+    <value>whsFindingTabPage</value>
+  </data>
+  <data name="&gt;&gt;whsFindingTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;whsFindingTabPage.Parent" xml:space="preserve">
+    <value>WHSTabControl</value>
+  </data>
+  <data name="&gt;&gt;whsFindingTabPage.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="WHSTabControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="WHSTabControl.ItemSize" type="System.Drawing.Size, System.Drawing">
+    <value>98, 25</value>
+  </data>
+  <data name="WHSTabControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="WHSTabControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1506, 651</value>
+  </data>
+  <data name="WHSTabControl.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;WHSTabControl.Name" xml:space="preserve">
+    <value>WHSTabControl</value>
+  </data>
+  <data name="&gt;&gt;WHSTabControl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;WHSTabControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;WHSTabControl.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="cultureManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>282, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>83</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LnkLogout.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="LnkLogout.LinkArea" type="System.Windows.Forms.LinkArea, System.Windows.Forms">
+    <value>0, 6</value>
+  </data>
+  <data name="LnkLogout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>234, 9</value>
+  </data>
+  <data name="LnkLogout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 300, 0</value>
+  </data>
+  <data name="LnkLogout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 13</value>
+  </data>
+  <data name="LnkLogout.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="LnkLogout.Text" xml:space="preserve">
+    <value>LogOut</value>
+  </data>
+  <data name="LnkLogout.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>BottomRight</value>
+  </data>
+  <data name="LnkLogout.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;LnkLogout.Name" xml:space="preserve">
+    <value>LnkLogout</value>
+  </data>
+  <data name="&gt;&gt;LnkLogout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LnkLogout.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LnkLogout.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1506, 651</value>
+  </data>
+  <data name="&gt;&gt;whiteHatToolStripMenuItem.Name" xml:space="preserve">
+    <value>whiteHatToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;whiteHatToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;languageToolStripMenuItem.Name" xml:space="preserve">
+    <value>languageToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;languageToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EnglishToolStripRadioButtonMenuItem.Name" xml:space="preserve">
+    <value>EnglishToolStripRadioButtonMenuItem</value>
+  </data>
+  <data name="&gt;&gt;EnglishToolStripRadioButtonMenuItem.Type" xml:space="preserve">
+    <value>WhiteHatSec.VSIX.Utility.ToolStripRadioButtonMenuItem, WhiteHatSec.VSIX, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c0c2f8dc430a53f0</value>
+  </data>
+  <data name="&gt;&gt;JapaneseToolStripRadioButtonMenuItem.Name" xml:space="preserve">
+    <value>JapaneseToolStripRadioButtonMenuItem</value>
+  </data>
+  <data name="&gt;&gt;JapaneseToolStripRadioButtonMenuItem.Type" xml:space="preserve">
+    <value>WhiteHatSec.VSIX.Utility.ToolStripRadioButtonMenuItem, WhiteHatSec.VSIX, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c0c2f8dc430a53f0</value>
+  </data>
+  <data name="&gt;&gt;germanToolStripRadioButtonMenuItem.Name" xml:space="preserve">
+    <value>germanToolStripRadioButtonMenuItem</value>
+  </data>
+  <data name="&gt;&gt;germanToolStripRadioButtonMenuItem.Type" xml:space="preserve">
+    <value>WhiteHatSec.VSIX.Utility.ToolStripRadioButtonMenuItem, WhiteHatSec.VSIX, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c0c2f8dc430a53f0</value>
+  </data>
+  <data name="&gt;&gt;ImportSentinelResultsToolStripMenuItem.Name" xml:space="preserve">
+    <value>ImportSentinelResultsToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;ImportSentinelResultsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;uploadProjectToolStripMenuItem.Name" xml:space="preserve">
+    <value>uploadProjectToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;uploadProjectToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;showSolutionToolStripMenuItem.Name" xml:space="preserve">
+    <value>showSolutionToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;showSolutionToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripRadioButtonRight.Name" xml:space="preserve">
+    <value>ToolStripRadioButtonRight</value>
+  </data>
+  <data name="&gt;&gt;ToolStripRadioButtonRight.Type" xml:space="preserve">
+    <value>WhiteHatSec.VSIX.Utility.ToolStripRadioButtonMenuItem, WhiteHatSec.VSIX, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c0c2f8dc430a53f0</value>
+  </data>
+  <data name="&gt;&gt;toolStripRadioButtonBottom.Name" xml:space="preserve">
+    <value>toolStripRadioButtonBottom</value>
+  </data>
+  <data name="&gt;&gt;toolStripRadioButtonBottom.Type" xml:space="preserve">
+    <value>WhiteHatSec.VSIX.Utility.ToolStripRadioButtonMenuItem, WhiteHatSec.VSIX, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c0c2f8dc430a53f0</value>
+  </data>
+  <data name="&gt;&gt;GetDetailsToolStripMenuItem.Name" xml:space="preserve">
+    <value>GetDetailsToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;GetDetailsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem1.Name" xml:space="preserve">
+    <value>toolStripMenuItem1</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;logOutMenuItem.Name" xml:space="preserve">
+    <value>logOutMenuItem</value>
+  </data>
+  <data name="&gt;&gt;logOutMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;whitehatToolStripMenuItem1.Name" xml:space="preserve">
+    <value>whitehatToolStripMenuItem1</value>
+  </data>
+  <data name="&gt;&gt;whitehatToolStripMenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cultureManager1.Name" xml:space="preserve">
+    <value>cultureManager1</value>
+  </data>
+  <data name="&gt;&gt;cultureManager1.Type" xml:space="preserve">
+    <value>WhiteHatSec.Localization.Culture.Resource.CultureManager, WhiteHatSec.Localization.Culture, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9dc99b989f875e46</value>
+  </data>
+  <data name="&gt;&gt;sentinelToolTip.Name" xml:space="preserve">
+    <value>sentinelToolTip</value>
+  </data>
+  <data name="&gt;&gt;sentinelToolTip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItemHelp.Name" xml:space="preserve">
+    <value>toolStripMenuItemHelp</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItemHelp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>WhsMainWindow</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>WhiteHatSec.VSIX.BaseControl.BaseControl, WhiteHatSec.VSIX, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c0c2f8dc430a53f0</value>
+  </data>
+  <metadata name="sentinelToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>147, 17</value>
+  </metadata>
+</root>

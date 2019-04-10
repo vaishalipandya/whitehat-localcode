@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AuthenticationFailed" xml:space="preserve">
+    <value>Authentifizierung Fehlgeschlagen!</value>
+  </data>
+  <data name="AuthenticationFailedPleaseEnterCorrectCredential" xml:space="preserve">
+    <value>Authentifizierung Fehlgeschlagen! Bitte gib die richtigen Anmeldeinformationen.</value>
+  </data>
+  <data name="AuthenticationFailedPleaseEnterCorrectServerDetail" xml:space="preserve">
+    <value>Authentifizierung fehlgeschlagen! Bitte gib die richtigen Server-Detail.</value>
+  </data>
+  <data name="BrowseFile" xml:space="preserve">
+    <value>Durchsuchen Datei</value>
+  </data>
+  <data name="ConnectionTimeout" xml:space="preserve">
+    <value>Connection Timeout!</value>
+  </data>
+  <data name="EnterAValidURL" xml:space="preserve">
+    <value>Geben Sie eine gültige URL.</value>
+  </data>
+  <data name="ErrorMessage" xml:space="preserve">
+    <value>Fehlermeldung</value>
+  </data>
+  <data name="FailedToParseJson" xml:space="preserve">
+    <value>Fehler beim JSON parsen.</value>
+  </data>
+  <data name="FailedToPostQuestion" xml:space="preserve">
+    <value>Fehler beim Frage zu stellen.</value>
+  </data>
+  <data name="FailedToUploadProject" xml:space="preserve">
+    <value>Fehler beim Projekt vorstellen kann.</value>
+  </data>
+  <data name="FileIsEmpty" xml:space="preserve">
+    <value>Die Datei ist leer.</value>
+  </data>
+  <data name="ImportProperJsonFile" xml:space="preserve">
+    <value>Importieren richtige JSON-Datei.</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Nachricht</value>
+  </data>
+  <data name="NotAbleToMatchLineAndMethod" xml:space="preserve">
+    <value>Nicht in der Lage, Linie und Verfahren entsprechen.</value>
+  </data>
+  <data name="NotAbleToMatchLineButAbleToFindMatchForMethod" xml:space="preserve">
+    <value>Nicht in der Lage, Linie entsprechen. Aber in der Lage, Spiel um Verfahren zu finden.</value>
+  </data>
+  <data name="PleaseEnterCredentialDetail" xml:space="preserve">
+    <value>Bitte geben Sie Credential-Detail.</value>
+  </data>
+  <data name="PleaseEnterQuestion" xml:space="preserve">
+    <value>Bitte geben Sie Frage.</value>
+  </data>
+  <data name="PleaseEnterServerDetail" xml:space="preserve">
+    <value>Bitte geben Sie Server-Detail.</value>
+  </data>
+  <data name="PleaseEnterServerToUploadProject" xml:space="preserve">
+    <value>Bitte geben Sie Server zu Projekt vorstellen kann.</value>
+  </data>
+  <data name="ProjectIsUploadedSucessfully" xml:space="preserve">
+    <value>Projekt erfolgreich hochgeladen.</value>
+  </data>
+  <data name="QuestionIsPosted" xml:space="preserve">
+    <value>Frage wurde erfolgreich gebucht.</value>
+  </data>
+  <data name="RequireToBrowseFile" xml:space="preserve">
+    <value>Verlangen, dass Datei zu suchen :</value>
+  </data>
+  <data name="SASTVulnerabilityWarning" xml:space="preserve">
+    <value>SAST Vulnerability Warning</value>
+  </data>
+  <data name="SelectAnApp" xml:space="preserve">
+    <value>Wählen Sie ein App</value>
+  </data>
+  <data name="SelectApp" xml:space="preserve">
+    <value>Select App</value>
+  </data>
+  <data name="SelectedFilenameIsDifferentThenRowPointedFile" xml:space="preserve">
+    <value>Ausgewählte Dateiname andere Zeile dann spitzen Datei</value>
+  </data>
+  <data name="SelectToDateGreaterThanFromDate" xml:space="preserve">
+    <value>Wählen Sie, um mehr als Aus Datum Datum.</value>
+  </data>
+  <data name="SentinelIDEPlugin" xml:space="preserve">
+    <value>Sentinel IDE Plugin</value>
+  </data>
+  <data name="SentinelLoginRequired" xml:space="preserve">
+    <value>Sentinel Login erforderlich.</value>
+  </data>
+  <data name="ThereIsNoProjectToUpload" xml:space="preserve">
+    <value>Es gibt kein Projekt zu laden.</value>
+  </data>
+  <data name="VulnsFound" xml:space="preserve">
+    <value>Sicherheitslücke gefunden</value>
+  </data>
+</root>
