@@ -588,7 +588,7 @@ namespace WhiteHatSec.VSIX.UserControls
             BackColor = CurrentThemeBackColor;
             ForeColor = CurrentThemeForColor;
             //whitehatToolStripMenuItem1.BackColor = System.Drawing.ColorTranslator.FromHtml("#019EDF");
-            whitehatToolStripMenuItem1.BackColor = Color.White;
+           // whitehatToolStripMenuItem1.BackColor = Color.White;
             WHSTabControl.Invalidate();
         }
 

@@ -180,6 +180,9 @@
   <data name="lblFilter.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="lblFilter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="lblFilter.Location" type="System.Drawing.Point, System.Drawing">
     <value>133, 31</value>
   </data>
@@ -204,8 +207,11 @@
   <data name="&gt;&gt;lblFilter.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="pictureBoxRefresh.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="pictureBoxRefresh.Location" type="System.Drawing.Point, System.Drawing">
-    <value>325, 25</value>
+    <value>325, 26</value>
   </data>
   <data name="pictureBoxRefresh.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 23</value>
@@ -227,6 +233,9 @@
   </data>
   <data name="&gt;&gt;pictureBoxRefresh.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="btnAskQuestion.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="btnAskQuestion.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 26</value>
@@ -254,6 +263,9 @@
   </data>
   <data name="lblInstruction.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="lblInstruction.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="lblInstruction.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 6</value>
