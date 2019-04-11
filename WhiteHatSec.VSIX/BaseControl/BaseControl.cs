@@ -129,6 +129,7 @@ namespace WhiteHatSec.VSIX.BaseControl
 
         public Color CurrentThemeForColor { get { return VSColorTheme.GetThemedColor(EnvironmentColors.ToolWindowTextColorKey); } }
         public Color CurrentThemeBorderColor { get {return VSColorTheme.GetThemedColor(EnvironmentColors.ToolWindowTabBorderColorKey); } }
+        public Color CurrentThemeDropDownBorderColor { get { return VSColorTheme.GetThemedColor(EnvironmentColors.DropDownBorderColorKey); } }
         public Color CurrentThemeBackColor { get { return VSColorTheme.GetThemedColor(EnvironmentColors.ToolWindowBackgroundColorKey); } }
     }
 }
