@@ -37,10 +37,8 @@ namespace WhiteHatSec.VSIX.UserControls
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBoxClearFilter = new System.Windows.Forms.PictureBox();
             this.txtFilter = new System.Windows.Forms.TextBox();
             this.lblFilter = new System.Windows.Forms.Label();
-            this.pictureBoxRefresh = new System.Windows.Forms.PictureBox();
             this.btnAskQuestion = new System.Windows.Forms.Button();
             this.lblInstruction = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -51,11 +49,13 @@ namespace WhiteHatSec.VSIX.UserControls
             this.toolTipQA = new System.Windows.Forms.ToolTip(this.components);
             this.imageStrip = new System.Windows.Forms.ImageList(this.components);
             this.cultureManager1 = new WhiteHatSec.Localization.Culture.Resource.CultureManager(this.components);
+            this.pictureBoxClearFilter = new System.Windows.Forms.PictureBox();
+            this.pictureBoxRefresh = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClearFilter)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRefresh)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.treeGridViewQAFilter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClearFilter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRefresh)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -70,15 +70,6 @@ namespace WhiteHatSec.VSIX.UserControls
             this.panel1.Controls.Add(this.lblInstruction);
             this.panel1.Name = "panel1";
             // 
-            // pictureBoxClearFilter
-            // 
-            this.pictureBoxClearFilter.Image = global::WhiteHatSec.VSIX.Resources.Resources.ClearEdit;
-            resources.ApplyResources(this.pictureBoxClearFilter, "pictureBoxClearFilter");
-            this.pictureBoxClearFilter.Name = "pictureBoxClearFilter";
-            this.pictureBoxClearFilter.TabStop = false;
-            this.toolTipQA.SetToolTip(this.pictureBoxClearFilter, resources.GetString("pictureBoxClearFilter.ToolTip"));
-            this.pictureBoxClearFilter.Click += new System.EventHandler(this.PictureBoxClearFilter_Click);
-            // 
             // txtFilter
             // 
             resources.ApplyResources(this.txtFilter, "txtFilter");
@@ -89,15 +80,6 @@ namespace WhiteHatSec.VSIX.UserControls
             // 
             resources.ApplyResources(this.lblFilter, "lblFilter");
             this.lblFilter.Name = "lblFilter";
-            // 
-            // pictureBoxRefresh
-            // 
-            this.pictureBoxRefresh.Image = global::WhiteHatSec.VSIX.Resources.Resources.refresh;
-            resources.ApplyResources(this.pictureBoxRefresh, "pictureBoxRefresh");
-            this.pictureBoxRefresh.Name = "pictureBoxRefresh";
-            this.pictureBoxRefresh.TabStop = false;
-            this.toolTipQA.SetToolTip(this.pictureBoxRefresh, resources.GetString("pictureBoxRefresh.ToolTip"));
-            this.pictureBoxRefresh.Click += new System.EventHandler(this.PictureBoxRefresh_Click);
             // 
             // btnAskQuestion
             // 
@@ -175,6 +157,24 @@ namespace WhiteHatSec.VSIX.UserControls
             // 
             this.cultureManager1.ManagedControl = this;
             // 
+            // pictureBoxClearFilter
+            // 
+            this.pictureBoxClearFilter.Image = global::WhiteHatSec.VSIX.Resources.Resources.ClearEdit;
+            resources.ApplyResources(this.pictureBoxClearFilter, "pictureBoxClearFilter");
+            this.pictureBoxClearFilter.Name = "pictureBoxClearFilter";
+            this.pictureBoxClearFilter.TabStop = false;
+            this.toolTipQA.SetToolTip(this.pictureBoxClearFilter, resources.GetString("pictureBoxClearFilter.ToolTip"));
+            this.pictureBoxClearFilter.Click += new System.EventHandler(this.PictureBoxClearFilter_Click);
+            // 
+            // pictureBoxRefresh
+            // 
+            this.pictureBoxRefresh.Image = global::WhiteHatSec.VSIX.Resources.Resources.refresh;
+            resources.ApplyResources(this.pictureBoxRefresh, "pictureBoxRefresh");
+            this.pictureBoxRefresh.Name = "pictureBoxRefresh";
+            this.pictureBoxRefresh.TabStop = false;
+            this.toolTipQA.SetToolTip(this.pictureBoxRefresh, resources.GetString("pictureBoxRefresh.ToolTip"));
+            this.pictureBoxRefresh.Click += new System.EventHandler(this.PictureBoxRefresh_Click);
+            // 
             // QaFilter
             // 
             resources.ApplyResources(this, "$this");
@@ -185,10 +185,10 @@ namespace WhiteHatSec.VSIX.UserControls
             this.Load += new System.EventHandler(this.QAFilter_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClearFilter)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRefresh)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.treeGridViewQAFilter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClearFilter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRefresh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

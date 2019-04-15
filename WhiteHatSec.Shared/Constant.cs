@@ -2,6 +2,10 @@
 using EnvDTE80;
 
 using System.Web;
+using System.Collections.Generic;
+using System.Runtime.InteropServices;
+using System.Runtime.InteropServices.ComTypes;
+using EnvDTE;
 
 namespace WhiteHatSec.Shared
 {
@@ -22,15 +26,56 @@ namespace WhiteHatSec.Shared
 
         public static string getMetricsString()
         {
-            var dte = (DTE2)System.Runtime.InteropServices.Marshal.GetActiveObject("VisualStudio.DTE");
-            string vsVersion = dte.Version;
+            //var dte = (DTE2)System.Runtime.InteropServices.Marshal.GetActiveObject("VisualStudio.DTE");
+            DTE dte = null;
+            foreach (var item in GetInstances())
+            {
+                dte = item;
+                break;
+            }
+            var dte2 = (DTE2)dte;
+            string vsVersion = dte2.Version;
             string osVersion = Environment.OSVersion.Version.ToString();
             string rawMetrics = string.Format("\"{{\"source_name\": \"Visual Studio\",\"source_version\":\"{0}\",\"plugin_version\" : \"1.1\",\"OS\":\"Windows_{1}\"}}\"", vsVersion, osVersion);
             string urlEncodedMetrics = HttpUtility.UrlEncode(rawMetrics);
 
             return string.Format("&source={0}", urlEncodedMetrics);
         }
+        public static IEnumerable<DTE> GetInstances()
+        {
+            IRunningObjectTable rot;
+            IEnumMoniker enumMoniker;
+            int retVal = GetRunningObjectTable(0, out rot);
 
+            if (retVal == 0)
+            {
+                rot.EnumRunning(out enumMoniker);
+
+                IntPtr fetched = IntPtr.Zero;
+                IMoniker[] moniker = new IMoniker[1];
+                while (enumMoniker.Next(1, moniker, fetched) == 0)
+                {
+                    IBindCtx bindCtx;
+                    CreateBindCtx(0, out bindCtx);
+                    string displayName;
+                    moniker[0].GetDisplayName(bindCtx, null, out displayName);
+                    Console.WriteLine("Display Name: {0}", displayName);
+                    bool isVisualStudio = displayName.StartsWith("!VisualStudio");
+                    if (isVisualStudio)
+                    {
+                        object obj;
+                        rot.GetObject(moniker[0], out obj);
+                        var dte = obj as DTE;
+                        yield return dte;
+                    }
+                }
+            }
+        }
+        [DllImport("ole32.dll")]
+        private static extern void CreateBindCtx(int reserved, out IBindCtx ppbc);
+
+        [DllImport("ole32.dll")]
+        private static extern int GetRunningObjectTable(int reserved, out IRunningObjectTable prot);
         public static string PatchLibDownloadUrl = "https://na27.salesforce.com/sfc/p/#3000000007SE/a/33000000Pi6m/16L001nzRFgSMacw1PCThaW7BzU9d.HU7lk98ZWWvu0";
         public static string LicenseURL = "https://www.whitehatsec.com/terms-conditions/ide-plugin";
 

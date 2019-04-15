@@ -244,22 +244,12 @@ namespace WhiteHatSec.VSIX.UserControls
             ToolStripRadioButtonRight.Checked = true;
             //LnkLogout.Visible = false;
             EnglishToolStripRadioButtonMenuItem.Checked = true;
-
-            BaseInstance.VulnerabilityList.Clear();
-            WhsFindingWindow.TxtFolderPath.Text = string.Empty;
-            WhsFindingWindow.GenerateVulnTrace(0, Ascending);
-            WhsFindingWindow.WebBrowserSnippet.DocumentText = string.Empty;
-            WhsFindingWindow.WHSSolutionTabControl.SelectedIndex = 0;
-            WhsFindingWindow.WebBrowserDescription.DocumentText = string.Empty;
-            WhsFindingWindow.WebBrowserSolution.DocumentText = string.Empty;
-            WhsFindingWindow.QaFilterInfo.LoadQuestionAnswer();
-            WhsFindingWindow.QaFilterInfo.BindQaData("", Ascending);
+            
             SentinelBrowserCookie = string.Empty;
             SentinelCookie = new CookieContainer();
-
+            WhsFindingWindow.ClearFindingsData();
             WhsFindingWindow.ChangeOrientation(Orientation.Vertical);
             Cursor.Current = Cursors.Default;
-
             reNameManageVulnsTab(false);
           }
 
@@ -588,7 +578,7 @@ namespace WhiteHatSec.VSIX.UserControls
             BackColor = CurrentThemeBackColor;
             ForeColor = CurrentThemeForColor;
             //whitehatToolStripMenuItem1.BackColor = System.Drawing.ColorTranslator.FromHtml("#019EDF");
-            whitehatToolStripMenuItem1.BackColor = Color.White;
+           // whitehatToolStripMenuItem1.BackColor = Color.White;
             WHSTabControl.Invalidate();
         }
 
