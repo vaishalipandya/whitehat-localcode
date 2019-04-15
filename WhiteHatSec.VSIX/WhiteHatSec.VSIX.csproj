@@ -19,6 +19,9 @@
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -177,23 +180,47 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.html" />
-    <Content Include="ThirdParty\Microsoft.VisualStudio.Imaging.dll" />
+    <Content Include="ThirdParty\Microsoft.VisualStudio.Imaging.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="ThirdParty\Microsoft.VisualStudio.Imaging.xml" />
-    <Content Include="ThirdParty\Microsoft.VisualStudio.Shell.14.0.dll" />
+    <Content Include="ThirdParty\Microsoft.VisualStudio.OLE.Interop.dll" />
+    <Content Include="ThirdParty\Microsoft.VisualStudio.ProjectAggregator.dll" />
+    <Content Include="ThirdParty\Microsoft.VisualStudio.Shell.14.0.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="ThirdParty\Microsoft.VisualStudio.Shell.14.0.xml" />
-    <Content Include="ThirdParty\Microsoft.VisualStudio.Shell.Immutable.10.0.dll" />
+    <Content Include="ThirdParty\Microsoft.VisualStudio.Shell.Immutable.10.0.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="ThirdParty\Microsoft.VisualStudio.Shell.Immutable.10.0.xml" />
-    <Content Include="ThirdParty\Microsoft.VisualStudio.Shell.Immutable.11.0.dll" />
+    <Content Include="ThirdParty\Microsoft.VisualStudio.Shell.Immutable.11.0.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="ThirdParty\Microsoft.VisualStudio.Shell.Immutable.11.0.xml" />
-    <Content Include="ThirdParty\Microsoft.VisualStudio.Shell.Immutable.12.0.dll" />
+    <Content Include="ThirdParty\Microsoft.VisualStudio.Shell.Immutable.12.0.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="ThirdParty\Microsoft.VisualStudio.Shell.Immutable.12.0.xml" />
-    <Content Include="ThirdParty\Microsoft.VisualStudio.Shell.Immutable.14.0.dll" />
+    <Content Include="ThirdParty\Microsoft.VisualStudio.Shell.Immutable.14.0.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="ThirdParty\microsoft.visualstudio.shell.immutable.14.0.xml" />
-    <Content Include="ThirdParty\Microsoft.VisualStudio.Shell.Interop.10.0.dll" />
+    <Content Include="ThirdParty\Microsoft.VisualStudio.Shell.Interop.10.0.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="ThirdParty\Microsoft.VisualStudio.Shell.Interop.10.0.xml" />
-    <Content Include="ThirdParty\Microsoft.VisualStudio.Threading.dll" />
+    <Content Include="ThirdParty\Microsoft.VisualStudio.Shell.Interop.8.0.dll" />
+    <Content Include="ThirdParty\Microsoft.VisualStudio.Shell.Interop.9.0.dll" />
+    <Content Include="ThirdParty\Microsoft.VisualStudio.Shell.Interop.dll" />
+    <Content Include="ThirdParty\Microsoft.VisualStudio.TextManager.Interop.dll" />
+    <Content Include="ThirdParty\Microsoft.VisualStudio.Threading.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="ThirdParty\Microsoft.VisualStudio.Threading.xml" />
-    <Content Include="ThirdParty\Microsoft.VisualStudio.Utilities.dll" />
+    <Content Include="ThirdParty\Microsoft.VisualStudio.Utilities.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="ThirdParty\microsoft.visualstudio.utilities.xml" />
     <None Include="Resources\Arrow.png" />
     <None Include="Resources\back.png" />
@@ -267,9 +294,13 @@
       <HintPath>..\packages\Microsoft.VisualStudio.Imaging.14.3.25407\lib\net45\Microsoft.VisualStudio.Imaging.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-      <HintPath>..\packages\VSSDK.OLE.Interop.7.0.4\lib\net20\Microsoft.VisualStudio.OLE.Interop.dll</HintPath>
-      <Private>True</Private>
-      <Private>False</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ThirdParty\Microsoft.VisualStudio.OLE.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.ProjectAggregator, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>ThirdParty\Microsoft.VisualStudio.ProjectAggregator.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Shell.14.0, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.VisualStudio.Shell.14.0.14.0.23205\lib\Microsoft.VisualStudio.Shell.14.0.dll</HintPath>
@@ -293,7 +324,7 @@
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Shell.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\VSSDK.Shell.Interop.7.0.4\lib\net20\Microsoft.VisualStudio.Shell.Interop.dll</HintPath>
+      <HintPath>ThirdParty\Microsoft.VisualStudio.Shell.Interop.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Shell.Interop.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -311,24 +342,21 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-      <HintPath>..\packages\VSSDK.Shell.Interop.8.8.0.4\lib\net20\Microsoft.VisualStudio.Shell.Interop.8.0.dll</HintPath>
-      <Private>True</Private>
-      <Private>False</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ThirdParty\Microsoft.VisualStudio.Shell.Interop.8.0.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Shell.Interop.9.0, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-      <HintPath>..\packages\VSSDK.Shell.Interop.9.9.0.4\lib\net20\Microsoft.VisualStudio.Shell.Interop.9.0.dll</HintPath>
-      <Private>True</Private>
-      <Private>False</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ThirdParty\Microsoft.VisualStudio.Shell.Interop.9.0.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TextManager.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-      <HintPath>..\packages\VSSDK.TextManager.Interop.7.0.4\lib\net20\Microsoft.VisualStudio.TextManager.Interop.dll</HintPath>
-      <Private>True</Private>
-      <Private>False</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ThirdParty\Microsoft.VisualStudio.TextManager.Interop.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TextManager.Interop.8.0, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <HintPath>..\packages\VSSDK.TextManager.Interop.8.8.0.4\lib\net20\Microsoft.VisualStudio.TextManager.Interop.8.0.dll</HintPath>
       <Private>True</Private>
-      <Private>False</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Threading, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.VisualStudio.Threading.14.0.51107\lib\net45\Microsoft.VisualStudio.Threading.dll</HintPath>
