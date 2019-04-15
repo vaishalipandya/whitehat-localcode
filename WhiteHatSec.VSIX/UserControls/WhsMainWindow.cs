@@ -240,8 +240,8 @@ namespace WhiteHatSec.VSIX.UserControls
             WHSTabControl.SelectedIndex = 0;
             LoadLogin();
             GetDetailsToolStripMenuItem.Checked = true;
-            toolStripRadioButtonBottom.Checked = true;
-            ToolStripRadioButtonRight.Checked = false;
+            toolStripRadioButtonBottom.Checked = false;
+            ToolStripRadioButtonRight.Checked = true;
             //LnkLogout.Visible = false;
             EnglishToolStripRadioButtonMenuItem.Checked = true;
             
