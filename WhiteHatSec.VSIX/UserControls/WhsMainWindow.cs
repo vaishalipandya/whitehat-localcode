@@ -138,7 +138,6 @@ namespace WhiteHatSec.VSIX.UserControls
         }
         private void TabPages_DrawItem(object sender, DrawItemEventArgs e)
         {
-            //e.DrawBackground();
 
             Brush backBrush;
             Brush foreBrush;
@@ -577,8 +576,6 @@ namespace WhiteHatSec.VSIX.UserControls
             germanToolStripRadioButtonMenuItem.ForeColor = CurrentThemeForColor;
             BackColor = CurrentThemeBackColor;
             ForeColor = CurrentThemeForColor;
-            //whitehatToolStripMenuItem1.BackColor = System.Drawing.ColorTranslator.FromHtml("#019EDF");
-           // whitehatToolStripMenuItem1.BackColor = Color.White;
             WHSTabControl.Invalidate();
         }
 
