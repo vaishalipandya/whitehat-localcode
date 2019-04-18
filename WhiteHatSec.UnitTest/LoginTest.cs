@@ -52,7 +52,7 @@ namespace WhiteHatSec.UnitTest
         {
             var server = "sentinel.whitehatsec.com";
             var userName = "spandan.prajapati@einfochips.com";
-            var password = "whitehat@111";
+            var password = "Spandan123";
             var result = login.ValidUser(server, userName, password, cookieContainer);
             StringAssert.AreEqualIgnoringCase("true", result);
         }

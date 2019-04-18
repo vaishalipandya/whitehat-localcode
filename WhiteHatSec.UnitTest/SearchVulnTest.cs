@@ -37,7 +37,7 @@ namespace WhiteHatSec.UnitTest
         public void FilterMatchVulnClassTest()
         {
             var appsVulnData = GetAppVulnData();
-            var vulnFilterData = searchVuln.FilterVuln("Access.Directory.Traversal", appsVulnData);
+            var vulnFilterData = searchVuln.FilterVuln("Path Traversal", appsVulnData);
             Assert.AreEqual(2, vulnFilterData.Count);
         }
 
