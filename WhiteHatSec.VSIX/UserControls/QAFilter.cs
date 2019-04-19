@@ -238,7 +238,7 @@ namespace WhiteHatSec.VSIX.UserControls
                 //Check for filter text empty or not , create data based on that
                 if (string.IsNullOrEmpty(filterText))
                 {
-                    CreateQaData(QuestionAnswerData, SortOrder);
+                    CreateQaData(QuestionAnswerData, "Ascending");
                 }
                 else
                 {
@@ -647,7 +647,8 @@ namespace WhiteHatSec.VSIX.UserControls
                         questionAnswer = questionAnswers[i].Author.Split(new[] { "/" }, StringSplitOptions.None);
                     string qauthor = questionAnswer[3] != string.Empty ? questionAnswer[3] : string.Empty;
                     TreeGridNode node = treeGridViewQAFilter.Nodes.Add(
-                        questionAnswers[i].Created.ToString(DisplayDateFormat), qauthor,
+                        questionAnswers[i].Created, qauthor,
+                        //questionAnswers[i].Created.ToString(DisplayDateFormat), qauthor,
                         questionAnswers[i].Topic);
 
                     GenerateQaTreeStructure(i, node, questionAnswers, isParent);
