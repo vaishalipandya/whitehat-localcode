@@ -210,4 +210,7 @@
   <data name="VulnsFound" xml:space="preserve">
     <value>脆弱性が見つかりました</value>
   </data>
+  <data name="EmptyorInvalidUrl" xml:space="preserve">
+    <value>URLが空または無効です</value>
+  </data>
 </root>
