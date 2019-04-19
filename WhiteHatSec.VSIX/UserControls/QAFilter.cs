@@ -238,7 +238,7 @@ namespace WhiteHatSec.VSIX.UserControls
                 //Check for filter text empty or not , create data based on that
                 if (string.IsNullOrEmpty(filterText))
                 {
-                    CreateQaData(QuestionAnswerData, SortOrder);
+                    CreateQaData(QuestionAnswerData, Ascending);
                 }
                 else
                 {
