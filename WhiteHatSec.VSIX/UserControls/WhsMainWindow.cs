@@ -177,10 +177,9 @@ namespace WhiteHatSec.VSIX.UserControls
             }else
             {
                 logOutMenuItem.Visible = true;
-                WHSTabControl.TabPages[0].Text = "Manage Vulnerabilities";
+                WHSTabControl.TabPages[0].Text = MessageLog.ManageVulnerabilities; ;
             }
         }
-
         /// <summary>
         ///     Handles the Load event of the WhiteHatMainWindow control.
         /// </summary>

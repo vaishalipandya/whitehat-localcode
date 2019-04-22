@@ -210,6 +210,9 @@
   <data name="VulnsFound" xml:space="preserve">
     <value>Sicherheitslücke gefunden</value>
   </data>
+  <data name="Manage Vulnerabilities" xml:space="preserve">
+    <value>Verwundbarkeit von Sicherheitslücken</value>
+  </data>
   <data name="EmptyorInvalidUrl" xml:space="preserve">
     <value>URL ist leer oder ungültig</value>
   </data>
