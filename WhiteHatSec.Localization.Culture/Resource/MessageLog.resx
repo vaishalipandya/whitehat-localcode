@@ -213,4 +213,7 @@
   <data name="EmptyorInvalidUrl" xml:space="preserve">
     <value>Url is empty or Invalid</value>
   </data>
+  <data name="Manage Vulnerabilities" xml:space="preserve">
+    <value>Manage Vulnerabilities</value>
+  </data>
 </root>
