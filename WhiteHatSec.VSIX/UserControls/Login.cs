@@ -84,7 +84,12 @@ namespace WhiteHatSec.VSIX.UserControls
             try
             {
                 Cursor.Current = Cursors.WaitCursor;
-
+                if (!ValidateUrl())
+                {
+                    MessageBox.Show(MessageLog.EmptyorInvalidUrl, MessageLog.Message, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ParentWhsWindow.reNameManageVulnsTab(false);
+                    return;
+                }
                 // empty user Id password
                 if ((!string.IsNullOrEmpty(txtUserName.Text.Trim()) && !string.IsNullOrEmpty(txtPassword.Text)) &&
                       !string.IsNullOrEmpty(txtAPIKey.Text.Trim()))
@@ -209,6 +214,23 @@ namespace WhiteHatSec.VSIX.UserControls
             //        break;
             //}
             //return ret;
+        }
+
+        private bool ValidateUrl()
+        {
+            bool result = false;
+            var url = getServerLocation();
+            if (!string.IsNullOrEmpty(url))
+            {
+                Uri uriResult;
+                result = Uri.TryCreate(url, UriKind.Absolute, out uriResult)
+                    && (uriResult.Scheme == Uri.UriSchemeHttp || uriResult.Scheme == Uri.UriSchemeHttps);
+                if (!result && !url.Contains("://") )
+                {
+                    result = true;
+                }
+            }
+            return result;
         }
         void SetDefaultColors()
         {

@@ -84,7 +84,7 @@ namespace WhiteHatSec.VSIX.UserControls
         /// <summary>
         /// Display date format
         /// </summary>
-        public const string DisplayDateFormat = "MMM dd, yyyy";
+        public const string DisplayDateFormat = "MM-dd-yyyy";
         #endregion
 
         #region "Events"
@@ -238,7 +238,7 @@ namespace WhiteHatSec.VSIX.UserControls
                 //Check for filter text empty or not , create data based on that
                 if (string.IsNullOrEmpty(filterText))
                 {
-                    CreateQaData(QuestionAnswerData, "Ascending");
+                    CreateQaData(QuestionAnswerData, Ascending);
                 }
                 else
                 {
@@ -648,7 +648,6 @@ namespace WhiteHatSec.VSIX.UserControls
                     string qauthor = questionAnswer[3] != string.Empty ? questionAnswer[3] : string.Empty;
                     TreeGridNode node = treeGridViewQAFilter.Nodes.Add(
                         questionAnswers[i].Created, qauthor,
-                        //questionAnswers[i].Created.ToString(DisplayDateFormat), qauthor,
                         questionAnswers[i].Topic);
 
                     GenerateQaTreeStructure(i, node, questionAnswers, isParent);

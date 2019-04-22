@@ -338,5 +338,19 @@ namespace WhiteHatSec.Localization.Culture.Resource {
                 return ResourceManager.GetString("VulnsFound", resourceCulture);
             }
         }
+        public static string EmptyorInvalidUrl
+        {
+            get
+            {
+                return ResourceManager.GetString("EmptyorInvalidUrl", resourceCulture);
+            }
+        }
+        public static string ManageVulnerabilities
+        {
+            get
+            {
+                return ResourceManager.GetString("Manage Vulnerabilities", resourceCulture);
+            }
+        }
     }
 }

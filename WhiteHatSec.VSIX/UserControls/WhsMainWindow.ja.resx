@@ -262,4 +262,22 @@
   <data name="$this.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="EnglishToolStripRadioButtonMenuItem.Text" xml:space="preserve">
+    <value>英語</value>
+  </data>
+  <data name="germanToolStripRadioButtonMenuItem.Text" xml:space="preserve">
+    <value>ドイツ人</value>
+  </data>
+  <data name="JapaneseToolStripRadioButtonMenuItem.Text" xml:space="preserve">
+    <value>日本人</value>
+  </data>
+  <data name="logOutMenuItem.Text" xml:space="preserve">
+    <value>ログアウト</value>
+  </data>
+  <data name="toolStripMenuItemHelp.Text" xml:space="preserve">
+    <value>助けて</value>
+  </data>
+  <data name="toolStripMenuItem1.Text" xml:space="preserve">
+    <value>バージョン1.1</value>
+  </data>
 </root>

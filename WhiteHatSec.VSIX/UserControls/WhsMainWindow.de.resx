@@ -260,4 +260,10 @@
   <data name="LnkLogout.Text" xml:space="preserve">
     <value>abmelden</value>
   </data>
+  <data name="logOutMenuItem.Text" xml:space="preserve">
+    <value>Ausloggen</value>
+  </data>
+  <data name="toolStripMenuItemHelp.Text" xml:space="preserve">
+    <value>Hilfe</value>
+  </data>
 </root>
