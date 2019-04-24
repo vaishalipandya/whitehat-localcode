@@ -245,7 +245,7 @@
     <value />
   </data>
   <data name="whsFindingTabPage.Text" xml:space="preserve">
-    <value>ホワイトハット所見</value>
+    <value>デバッグの脆弱性</value>
   </data>
   <data name="whsFindingTabPage.ToolTip" xml:space="preserve">
     <value />
