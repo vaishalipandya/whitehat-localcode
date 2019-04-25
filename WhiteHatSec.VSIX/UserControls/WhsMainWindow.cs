@@ -59,6 +59,7 @@ namespace WhiteHatSec.VSIX.UserControls
                 }
                 logOutMenuItem.Click += LogOutMenuItem_Click;
                 toolStripMenuItemHelp.Click += helpMenuItemClick;
+                WHSTabControl.TabPages.Remove(whsFindingTabPage);              
                 reNameManageVulnsTab(false);
             }
             catch (Exception ex)
@@ -173,10 +174,12 @@ namespace WhiteHatSec.VSIX.UserControls
             if (!isLoggedIn)
             {
                 logOutMenuItem.Visible = false;
+                WHSTabControl.TabPages.Remove(whsFindingTabPage);
                 WHSTabControl.TabPages[0].Text = "Log In";
             }else
             {
                 logOutMenuItem.Visible = true;
+                WHSTabControl.TabPages.Add(whsFindingTabPage);
                 WHSTabControl.TabPages[0].Text = MessageLog.ManageVulnerabilities; ;
             }
         }
