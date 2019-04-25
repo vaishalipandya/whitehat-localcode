@@ -249,7 +249,7 @@
     <value>Whitehat</value>
   </data>
   <data name="whsFindingTabPage.Text" xml:space="preserve">
-    <value>WhiteHat Findings</value>
+    <value>Debug-Sicherheitslücken</value>
   </data>
   <data name="WHSMenuStrip.Text" xml:space="preserve">
     <value>Kontextmenü-Streifen</value>

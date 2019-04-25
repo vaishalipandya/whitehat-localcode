@@ -65,6 +65,12 @@
     <None Include="Key.snk" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WhiteHatSec.Shared\WhiteHatSec.Shared.csproj">
+      <Project>{6e7f83d1-4c28-47f6-927e-f33d93b2163e}</Project>
+      <Name>WhiteHatSec.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

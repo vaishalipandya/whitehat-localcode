@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using static WhiteHatSec.Shared.Enums;
 
 namespace WhiteHatSec.Entity
 {
@@ -43,8 +44,11 @@ namespace WhiteHatSec.Entity
             /// <value>
             ///     The Risk.
             /// </value>
-            private string _risk;
-            public string Risk { get { return char.ToUpper(_risk[0]) + _risk.Substring(1); } set { _risk = value; } }
+            private Severity _risk;
+            public Severity Risk { get { return _risk; } set { _risk = value; } }
+
+            //public string _risk;
+            //public string Risk { get { return char.ToUpper(_risk[0]) + _risk.Substring(1); } set { _risk = value; } }
 
             /// <summary>
             ///     Gets or sets the Status.
