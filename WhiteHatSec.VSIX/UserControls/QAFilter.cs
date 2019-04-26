@@ -707,6 +707,9 @@ namespace WhiteHatSec.VSIX.UserControls
         {
             Color defaultBackground = CurrentThemeBackColor;
             Color defaultForeground = CurrentThemeForColor;
+            panel1.BackColor = CurrentThemeBackColor;
+            btnAskQuestion.BackColor = CurrentThemeBackColor;
+            btnAskQuestion.ForeColor = CurrentThemeForColor;
             treeGridViewQAFilter.GridColor = defaultBackground;
             treeGridViewQAFilter.BackgroundColor = defaultBackground;
             treeGridViewQAFilter.ForeColor = defaultForeground;
@@ -716,6 +719,8 @@ namespace WhiteHatSec.VSIX.UserControls
             treeGridViewQAFilter.ColumnHeadersDefaultCellStyle.ForeColor = defaultForeground;
             treeGridViewQAFilter.EnableHeadersVisualStyles = false;
             treeGridViewQAFilter.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            txtFilter.BackColor = CurrentThemeBackColor;
+            txtFilter.ForeColor = CurrentThemeForColor;
             BackColor = CurrentThemeBackColor;
         }
         #endregion
