@@ -180,6 +180,17 @@ namespace WhiteHatSec.VSIX.UserControls
                 WHSTabControl.TabPages[0].Text = MessageLog.ManageVulnerabilities; ;
             }
         }
+        public void showHideDebugVulnTab(bool show)
+        {
+            if (show)
+            {
+                WHSTabControl.TabPages.Add(whsFindingTabPage);
+            }
+            else
+            {
+                WHSTabControl.TabPages.Remove(whsFindingTabPage);
+            }
+        }
         /// <summary>
         ///     Handles the Load event of the WhiteHatMainWindow control.
         /// </summary>
@@ -190,8 +201,6 @@ namespace WhiteHatSec.VSIX.UserControls
             try
             {
                 whsMenuStrip.BringToFront();
-                
-              
             }
             catch (Exception ex)
             {
@@ -515,7 +524,7 @@ namespace WhiteHatSec.VSIX.UserControls
                     ParentWhsWindow = this
                 };
                 login.serverTextBox.Text = server;
-
+                showHideDebugVulnTab(false);
                 FindVulnsPanel.Controls.Add(login);
                 FindVulnsPanel.BackColor = CurrentThemeBackColor;
                 FindVulnsPanel.ForeColor = CurrentThemeForColor;

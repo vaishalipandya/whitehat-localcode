@@ -114,6 +114,7 @@ namespace WhiteHatSec.VSIX.UserControls
                     if (ValidateUser(txtUserName.Text.Trim(), txtPassword.Text.Trim()))
                     {
                         ParentWhsWindow.reNameManageVulnsTab(true);
+                        ParentWhsWindow.showHideDebugVulnTab(true);
                     }
                     return;
                 }
@@ -122,6 +123,7 @@ namespace WhiteHatSec.VSIX.UserControls
                 if (ValidateApiKey(txtAPIKey.Text.Trim()))
                 {
                     ParentWhsWindow.reNameManageVulnsTab(true);
+                    ParentWhsWindow.showHideDebugVulnTab(true);
                 }
                 Cursor.Current = Cursors.Default;
 
