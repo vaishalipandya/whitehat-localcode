@@ -58,8 +58,7 @@ namespace WhiteHatSec.VSIX.UserControls
                     login.whsEUradioButton.Checked = true;
                 }
                 logOutMenuItem.Click += LogOutMenuItem_Click;
-                toolStripMenuItemHelp.Click += helpMenuItemClick;
-                WHSTabControl.TabPages.Remove(whsFindingTabPage);              
+                toolStripMenuItemHelp.Click += helpMenuItemClick;                   
                 reNameManageVulnsTab(false);
             }
             catch (Exception ex)
@@ -173,13 +172,11 @@ namespace WhiteHatSec.VSIX.UserControls
         {
             if (!isLoggedIn)
             {
-                logOutMenuItem.Visible = false;
-                WHSTabControl.TabPages.Remove(whsFindingTabPage);
+                logOutMenuItem.Visible = false;              
                 WHSTabControl.TabPages[0].Text = "Log In";
             }else
             {
-                logOutMenuItem.Visible = true;
-                WHSTabControl.TabPages.Add(whsFindingTabPage);
+                logOutMenuItem.Visible = true;              
                 WHSTabControl.TabPages[0].Text = MessageLog.ManageVulnerabilities; ;
             }
         }
