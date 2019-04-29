@@ -256,6 +256,9 @@ namespace WhiteHatSec.VSIX.UserControls
         private static SortOrder sortOrder;
         private static DataGridViewColumnSortMode sortDirection;
         private static string sortCol;
+        /// <summary>
+        /// save sort order
+        /// </summary>
         private void saveSortOrder()
         {
             if (treeGridViewQAFilter.SortedColumn != null)
@@ -268,6 +271,9 @@ namespace WhiteHatSec.VSIX.UserControls
                 sortCol = null;
             }
         }
+        /// <summary>
+        /// restore sort order
+        /// </summary>
         private void restoreSortOrder()
         {
             if(sortCol == null)
@@ -324,15 +330,6 @@ namespace WhiteHatSec.VSIX.UserControls
         private void TreeGridViewQAFilter_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
-
-            //string thisIsStupid = treeGridViewQAFilter.SortedColumn.Name;
-            //SortOrder m =treeGridViewQAFilter.SortedColumn.HeaderCell.SortGlyphDirection;
-            //DataGridViewColumnSortMode o = treeGridViewQAFilter.SortedColumn.SortMode;
-
-            //string activeVulnId = BaseInstance.ActiveVulnId;
-            //BindQaData("", Ascending);
-            //SortOrder = SortOrder == Ascending ? Descending : Ascending;
-            //BindQaData(activeVulnId, SortOrder);
             Cursor.Current = Cursors.Default;
         }
 
@@ -374,6 +371,10 @@ namespace WhiteHatSec.VSIX.UserControls
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        /// <summary>
+        ///Qa filter theme change accroding to visual studio current selected theme
+        /// </summary>
+        /// <param name="e"></param>
         void VSColorTheme_ThemeChanged(ThemeChangedEventArgs e)
         {
             SetDefaultColors();
@@ -428,8 +429,6 @@ namespace WhiteHatSec.VSIX.UserControls
             if (postQuestionResponseCode == 201)
             {
                 Cursor.Current = Cursors.Default;
-                //MessageBox.Show(MessageLog.QuestionIsPosted, MessageLog.Message, MessageBoxButtons.OK,
-                //    MessageBoxIcon.Information);
                 LoadQuestionAnswer();
                 BindQaData(BaseInstance.ActiveVulnId, Ascending);
                 return;
@@ -703,6 +702,9 @@ namespace WhiteHatSec.VSIX.UserControls
                 node.ImageIndex = -1;
             }
         }
+        /// <summary>
+        /// according to visual studio  theme apply color in Qa filter control
+        /// </summary>
         void SetDefaultColors()
         {
             Color defaultBackground = CurrentThemeBackColor;

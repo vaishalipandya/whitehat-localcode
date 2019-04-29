@@ -24,8 +24,7 @@ namespace WhiteHatSec.VSIX.DatePicker
             this.SetStyle(ControlStyles.UserPaint, true);
             InitializeComponent();
 
-            InitTextBox();
-            //SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+            InitTextBox();          
             base.Format = DateTimePickerFormat.Custom;
             formatDate = DateTimePickerFormat.Long;
 
@@ -681,7 +680,8 @@ namespace WhiteHatSec.VSIX.DatePicker
 
         private void UpdateReadOnlyTextBoxParent()
         {
-            //If UTDP.Parent == null, set textBox.Parent == null and return
+          
+
             if (Parent == null)
             {
                 textBox.Parent = null;
@@ -747,8 +747,7 @@ namespace WhiteHatSec.VSIX.DatePicker
         protected override void OnPaint(PaintEventArgs e)
         {
             var currentThemeBackColor = VSColorTheme.GetThemedColor(EnvironmentColors.ToolWindowBackgroundColorKey);
-            var currentThemeForColor = VSColorTheme.GetThemedColor(EnvironmentColors.ToolWindowTextColorKey);
-            //base.OnPaint(e);
+            var currentThemeForColor = VSColorTheme.GetThemedColor(EnvironmentColors.ToolWindowTextColorKey);      
             e.Graphics.FillRectangle(new SolidBrush(currentThemeBackColor), this.ClientRectangle);
             e.Graphics.DrawString(this.Text, this.Font, new SolidBrush(currentThemeForColor), 5, 3);
             e.Graphics.DrawImage(WhiteHatSec.VSIX.Resources.Resources.Calender, new Point(this.ClientRectangle.X + this.ClientRectangle.Width - 16, this.ClientRectangle.Y));

@@ -26,7 +26,6 @@ namespace WhiteHatSec.Shared
 
         public static string getMetricsString()
         {
-            //var dte = (DTE2)System.Runtime.InteropServices.Marshal.GetActiveObject("VisualStudio.DTE");
             DTE dte = null;
             foreach (var item in GetInstances())
             {
@@ -38,7 +37,6 @@ namespace WhiteHatSec.Shared
             string osVersion = Environment.OSVersion.Version.ToString();
             string rawMetrics = string.Format("\"{{\"source_name\": \"Visual Studio\",\"source_version\":\"{0}\",\"plugin_version\" : \"1.1\",\"OS\":\"Windows_{1}\"}}\"", vsVersion, osVersion);
             string urlEncodedMetrics = HttpUtility.UrlEncode(rawMetrics);
-
             return string.Format("&source={0}", urlEncodedMetrics);
         }
         public static IEnumerable<DTE> GetInstances()
