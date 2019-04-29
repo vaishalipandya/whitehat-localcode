@@ -27,7 +27,7 @@ namespace WhiteHatSec.Shared
         public static string getMetricsString()
         {
             DTE dte = null;
-            foreach (var item in GetInstances())
+            foreach (var item in GetCurrentVisualStudioInstance())
             {
                 dte = item;
                 break;
@@ -39,7 +39,7 @@ namespace WhiteHatSec.Shared
             string urlEncodedMetrics = HttpUtility.UrlEncode(rawMetrics);
             return string.Format("&source={0}", urlEncodedMetrics);
         }
-        public static IEnumerable<DTE> GetInstances()
+        public static IEnumerable<DTE> GetCurrentVisualStudioInstance()
         {
             IRunningObjectTable rot;
             IEnumMoniker enumMoniker;

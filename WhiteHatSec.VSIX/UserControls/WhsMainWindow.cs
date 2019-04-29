@@ -68,12 +68,20 @@ namespace WhiteHatSec.VSIX.UserControls
         }
 
       
-        
+        /// <summary>
+        /// Handle click event of Help context menu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void helpMenuItemClick(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://na27.salesforce.com/sfc/p/#3000000007SE/a/33000000Phxa/MWav20lz_18YaGE9ilg6fQ9k7vlrdbobGIrksBrrq7c");
         }
-        
+        /// <summary>
+        /// Handles log out menu click event.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void LogOutMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -131,11 +139,20 @@ namespace WhiteHatSec.VSIX.UserControls
         #endregion
 
         #region "Events"
-       
+       /// <summary>
+       /// Handle the theme change event of Visual studio.
+       /// </summary>
+       /// <param name="e"></param>
         private void VSColorTheme_ThemeChanged(ThemeChangedEventArgs e)
         {
             SetDefaultColors();
         }
+
+        /// <summary>
+        /// Handle Tab draw event of Tabs
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TabPages_DrawItem(object sender, DrawItemEventArgs e)
         {
 
@@ -153,21 +170,25 @@ namespace WhiteHatSec.VSIX.UserControls
             e.Graphics.FillRectangle(backBrush, e.Bounds);
 
             //You may need to write the label here also?
-            StringFormat sf = new StringFormat();
-            sf.Alignment = StringAlignment.Near;
+            StringFormat tabSurroundingformat = new StringFormat();
+            tabSurroundingformat.Alignment = StringAlignment.Near;
 
-            Rectangle r = e.Bounds;
-            r = new Rectangle(r.X, r.Y + 3, r.Width + 20, r.Height - 3);
-            e.Graphics.DrawString(WHSTabControl.TabPages[e.Index].Text, e.Font, foreBrush, r, sf);
+            Rectangle rect = e.Bounds;
+            rect = new Rectangle(rect.X, rect.Y + 3, rect.Width + 20, rect.Height - 3);
+            e.Graphics.DrawString(WHSTabControl.TabPages[e.Index].Text, e.Font, foreBrush, rect, tabSurroundingformat);
 
-            Rectangle lasttabrect = WHSTabControl.GetTabRect(WHSTabControl.TabPages.Count - 1);
+            Rectangle remainngEmptyRect = WHSTabControl.GetTabRect(WHSTabControl.TabPages.Count - 1);
             Rectangle background = new Rectangle();
-            background.Location = new Point(lasttabrect.Right, 0);
+            background.Location = new Point(remainngEmptyRect.Right, 0);
 
             //pad the rectangle to cover the 1 pixel line between the top of the tabpage and the start of the tabs
-            background.Size = new Size(WHSTabControl.Right - background.Left, lasttabrect.Height + 5);
+            background.Size = new Size(WHSTabControl.Right - background.Left, remainngEmptyRect.Height + 5);
             e.Graphics.FillRectangle(backBrush, background);
         }
+        /// <summary>
+        /// Renames Login tab to ManageVulnerabilities tab.
+        /// </summary>
+        /// <param name="isLoggedIn"></param>
         public void reNameManageVulnsTab(Boolean isLoggedIn)
         {
             if (!isLoggedIn)
@@ -180,6 +201,10 @@ namespace WhiteHatSec.VSIX.UserControls
                 WHSTabControl.TabPages[0].Text = MessageLog.ManageVulnerabilities; ;
             }
         }
+        /// <summary>
+        /// Show/Hide display vulnerabilities tab based on condition.
+        /// </summary>
+        /// <param name="show"></param>
         public void showHideDebugVulnTab(bool show)
         {
             if (show)
@@ -227,7 +252,9 @@ namespace WhiteHatSec.VSIX.UserControls
                     MessageBoxIcon.Error);
             }
         }
-
+        /// <summary>
+        /// Log out processing method.
+        /// </summary>
         private void logOut()
         {
             BaseInstance.SentinelServerName = string.Empty;
@@ -526,6 +553,9 @@ namespace WhiteHatSec.VSIX.UserControls
                 Log.Error(ex.Message, ex);
             }
         }
+        /// <summary>
+        /// Changes the User experience based on theme.
+        /// </summary>
         void SetDefaultColors()
         {
 
@@ -589,7 +619,11 @@ namespace WhiteHatSec.VSIX.UserControls
         {
 
         }
-
+        /// <summary>
+        /// Change Selected vuln tab based on selection.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void click_tab_debugVulns(object sender, EventArgs e)
         {
             if (!BaseInstance.IsAuthenticated && !BaseInstance.IsAuthenticatedByApiKey)
