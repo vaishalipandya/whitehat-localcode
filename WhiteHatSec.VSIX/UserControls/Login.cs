@@ -28,14 +28,6 @@ namespace WhiteHatSec.VSIX.UserControls
             try
             {
                 InitializeComponent();
-                //if (ParentWhsWindow.currentServiceLocation == ServiceLocation.WHS_US)
-                //{
-                //    whsCOMradioButton.Checked = true;
-                //}
-                //else
-                //{
-                //    whsEUradioButton.Checked = true;
-                //}
                 SetDefaultColors();
                 VSColorTheme.ThemeChanged += VSColorTheme_ThemeChanged;
                 SetStyle(ControlStyles.SupportsTransparentBackColor, true);
@@ -205,17 +197,6 @@ namespace WhiteHatSec.VSIX.UserControls
         private string getServerLocation()
         {
             return serverTextBox.Text;
-            //string ret = Constant.whsUsUrl;
-            //switch (ParentWhsWindow.currentServiceLocation)
-            //{
-            //    case ServiceLocation.WHS_EU:
-            //        ret = Constant.whsEuUrl;
-            //        break;
-            //    case ServiceLocation.WHS_US:
-            //        ret = Constant.whsUsUrl;
-            //        break;
-            //}
-            //return ret;
         }
 
         private bool ValidateUrl()
@@ -283,12 +264,6 @@ namespace WhiteHatSec.VSIX.UserControls
                     {
                         BaseInstance.AppsDetail.ResponseMessage = "Sorry, the API key isn't correct. Get API key from https://source.whitehatsec.com/profile.html#/my/profile.";
                     }
-                    //else
-                    //{
-                    //    BaseInstance.AppsDetail.ResponseMessage = MessageLog.AuthenticationFailed;
-                    //}
-
-                    
                     MessageBox.Show(BaseInstance.AppsDetail.ResponseMessage, MessageLog.Message,
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
@@ -401,7 +376,6 @@ namespace WhiteHatSec.VSIX.UserControls
             try
             {
                 Log.Info("****Going to redirect after login in to Sentinel****");
-                //ParentWhsWindow.LnkLogout.Visible = true;
                 ParentWhsWindow.FindVulnsPanel.Controls.Clear();
                 SearchVulnerability findVulnsSearch = new SearchVulnerability
                 {

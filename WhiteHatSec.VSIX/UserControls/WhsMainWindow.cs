@@ -249,7 +249,6 @@ namespace WhiteHatSec.VSIX.UserControls
             GetDetailsToolStripMenuItem.Checked = true;
             toolStripRadioButtonBottom.Checked = false;
             ToolStripRadioButtonRight.Checked = true;
-            //LnkLogout.Visible = false;
             EnglishToolStripRadioButtonMenuItem.Checked = true;
             
             SentinelBrowserCookie = string.Empty;
@@ -307,32 +306,6 @@ namespace WhiteHatSec.VSIX.UserControls
                     MessageBoxIcon.Error);
             }
         }
-
-        
-        ///// <summary>
-        /////     Handles the Click event of the whsComMenuItem_Click control to change culture to japanese.
-        ///// </summary>
-        ///// <param name="sender">The source of the event.</param>
-        ///// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
-        //private void whsComMenuItem_Click(object sender, EventArgs e)
-        //{
-        //    currentServiceLocation = ServiceLocation.WHS_US;
-        //    Settings.Default.ServiceLocation = currentServiceLocation;
-        //    Settings.Default.Save();
-        //}
-
-        //        /// <summary>
-        /////     Handles the Click event of the whsEuMenuItem_Click control to change culture to japanese.
-        ///// </summary>
-        ///// <param name="sender">The source of the event.</param>
-        ///// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
-        //private void whsEuMenuItem_Click(object sender, EventArgs e)
-        //{
-        //    currentServiceLocation = ServiceLocation.WHS_EU;
-        //    Settings.Default.ServiceLocation = currentServiceLocation;
-        //    Settings.Default.Save();
-        //}
-
         /// <summary>
         ///     Handles the Click event of the JapaneseToolStripRadioButtonMenuItem control to change culture to japanese.
         /// </summary>

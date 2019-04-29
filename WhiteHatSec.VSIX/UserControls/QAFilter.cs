@@ -324,15 +324,6 @@ namespace WhiteHatSec.VSIX.UserControls
         private void TreeGridViewQAFilter_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
-
-            //string thisIsStupid = treeGridViewQAFilter.SortedColumn.Name;
-            //SortOrder m =treeGridViewQAFilter.SortedColumn.HeaderCell.SortGlyphDirection;
-            //DataGridViewColumnSortMode o = treeGridViewQAFilter.SortedColumn.SortMode;
-
-            //string activeVulnId = BaseInstance.ActiveVulnId;
-            //BindQaData("", Ascending);
-            //SortOrder = SortOrder == Ascending ? Descending : Ascending;
-            //BindQaData(activeVulnId, SortOrder);
             Cursor.Current = Cursors.Default;
         }
 
@@ -428,8 +419,6 @@ namespace WhiteHatSec.VSIX.UserControls
             if (postQuestionResponseCode == 201)
             {
                 Cursor.Current = Cursors.Default;
-                //MessageBox.Show(MessageLog.QuestionIsPosted, MessageLog.Message, MessageBoxButtons.OK,
-                //    MessageBoxIcon.Information);
                 LoadQuestionAnswer();
                 BindQaData(BaseInstance.ActiveVulnId, Ascending);
                 return;
