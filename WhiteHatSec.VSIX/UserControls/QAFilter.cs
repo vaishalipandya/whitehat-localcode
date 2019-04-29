@@ -256,6 +256,9 @@ namespace WhiteHatSec.VSIX.UserControls
         private static SortOrder sortOrder;
         private static DataGridViewColumnSortMode sortDirection;
         private static string sortCol;
+        /// <summary>
+        /// save sort order
+        /// </summary>
         private void saveSortOrder()
         {
             if (treeGridViewQAFilter.SortedColumn != null)
@@ -268,6 +271,9 @@ namespace WhiteHatSec.VSIX.UserControls
                 sortCol = null;
             }
         }
+        /// <summary>
+        /// restore sort order
+        /// </summary>
         private void restoreSortOrder()
         {
             if(sortCol == null)
@@ -365,6 +371,10 @@ namespace WhiteHatSec.VSIX.UserControls
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        /// <summary>
+        ///Qa filter theme change accroding to visual studio current selected theme
+        /// </summary>
+        /// <param name="e"></param>
         void VSColorTheme_ThemeChanged(ThemeChangedEventArgs e)
         {
             SetDefaultColors();
@@ -692,6 +702,9 @@ namespace WhiteHatSec.VSIX.UserControls
                 node.ImageIndex = -1;
             }
         }
+        /// <summary>
+        /// according to visual studio  theme apply color in Qa filter control
+        /// </summary>
         void SetDefaultColors()
         {
             Color defaultBackground = CurrentThemeBackColor;
