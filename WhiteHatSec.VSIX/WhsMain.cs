@@ -50,10 +50,17 @@ namespace WhiteHatSec.VSIX
             SetDefaultColors();
             VSColorTheme.ThemeChanged += VSColorTheme_ThemeChanged;
         }
+        /// <summary>
+        /// according to visual studio current theme apply  to window
+        /// </summary>
+        /// <param name="e"></param>
         void VSColorTheme_ThemeChanged(ThemeChangedEventArgs e)
         {
             SetDefaultColors();
         }
+        /// <summary>
+        /// according to visual studio current  theme apply to window
+        /// </summary>
         void SetDefaultColors()
         {
             Color defaultBackground = VSColorTheme.GetThemedColor(EnvironmentColors.ToolWindowBackgroundColorKey);
@@ -61,6 +68,11 @@ namespace WhiteHatSec.VSIX
             
             UpdateWindowColors(defaultBackground, defaultForeground);
         }
+        /// <summary>
+        /// update window background color
+        /// </summary>
+        /// <param name="clrBackground"></param>
+        /// <param name="clrForeground"></param>
         void UpdateWindowColors(Color clrBackground, Color clrForeground)
         {
             // Update the window background
@@ -70,6 +82,12 @@ namespace WhiteHatSec.VSIX
             // Also update the label
             UpdateRecursively(clrBackground, clrForeground, control);
         }
+        /// <summary>
+        /// update window lable color
+        /// </summary>
+        /// <param name="clrBackground"></param>
+        /// <param name="clrForeground"></param>
+        /// <param name="control"></param>
         void UpdateRecursively(Color clrBackground, Color clrForeground, Control control)
         {
             foreach (Control child in control.Controls)
