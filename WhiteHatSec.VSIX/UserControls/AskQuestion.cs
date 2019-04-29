@@ -22,6 +22,7 @@ namespace WhiteHatSec.VSIX.UserControls
             try
             {
                 InitializeComponent();
+                SetStyle(ControlStyles.SupportsTransparentBackColor, true);
                 SetDefaultColors();
                 VSColorTheme.ThemeChanged += VSColorTheme_ThemeChanged;
             }
@@ -44,6 +45,9 @@ namespace WhiteHatSec.VSIX.UserControls
             BtnSubmit.ForeColor = CurrentThemeForColor;
             BtnCancel.BackColor = CurrentThemeBackColor;
             BtnCancel.ForeColor = CurrentThemeForColor;
+            PanelQA.BackColor = CurrentThemeBackColor;
+            BackColor = CurrentThemeBackColor;
+            ForeColor = CurrentThemeForColor;
         }
         #region "Properties"
 
