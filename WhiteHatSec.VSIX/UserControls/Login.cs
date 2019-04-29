@@ -201,19 +201,19 @@ namespace WhiteHatSec.VSIX.UserControls
 
         private bool ValidateUrl()
         {
-            bool result = false;
+            bool isValidUrl = false;
             var url = getServerLocation();
             if (!string.IsNullOrEmpty(url))
             {
                 Uri uriResult;
-                result = Uri.TryCreate(url, UriKind.Absolute, out uriResult)
+                isValidUrl = Uri.TryCreate(url, UriKind.Absolute, out uriResult)
                     && (uriResult.Scheme == Uri.UriSchemeHttp || uriResult.Scheme == Uri.UriSchemeHttps);
-                if (!result && !url.Contains("://") )
+                if (!isValidUrl && !url.Contains("://") )
                 {
-                    result = true;
+                    isValidUrl = true;
                 }
             }
-            return result;
+            return isValidUrl;
         }
         void SetDefaultColors()
         {
