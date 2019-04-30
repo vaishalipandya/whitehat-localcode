@@ -32,8 +32,8 @@ namespace WhiteHatSec.VSIX.UserControls
                 InitializeComponent();
                 SetStyle(ControlStyles.SupportsTransparentBackColor, true);
                 SetDefaultColors();
-                ColumnDate.HeaderCell.SortGlyphDirection = System.Windows.Forms.SortOrder.Ascending;
-                treeGridViewQAFilter.Sort(ColumnDate, ListSortDirection.Ascending);
+                ColumnDate.HeaderCell.SortGlyphDirection = System.Windows.Forms.SortOrder.Descending;
+                treeGridViewQAFilter.Sort(ColumnDate, ListSortDirection.Descending);
                 VSColorTheme.ThemeChanged += VSColorTheme_ThemeChanged;
 
             }
@@ -238,7 +238,7 @@ namespace WhiteHatSec.VSIX.UserControls
                 //Check for filter text empty or not , create data based on that
                 if (string.IsNullOrEmpty(filterText))
                 {
-                    CreateQaData(QuestionAnswerData, Ascending);
+                    CreateQaData(QuestionAnswerData, Descending);
                 }
                 else
                 {
