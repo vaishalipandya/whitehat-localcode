@@ -205,13 +205,13 @@ namespace WhiteHatSec.Shared
         ///    Question Answer By Login URL
         /// </summary>
         public static string QuestionAnswerCookieUrl =
-            "https://{0}/api/discussion?query_resource=/api/source_vuln/{1}&page:limit=50&page:offset=0&page:order_by=created_asc&display_responses=1&_=1421980580382&format=json";
+            "https://{0}/api/discussion?query_resource=/api/source_vuln/{1}&page:limit=50&page:offset=0&page:order_by=created_desc&display_responses=1&_=1421980580382&format=json";
 
         /// <summary>
         ///    Question Answer By Api key URL
         /// </summary>
         public static string QuestionAnswerApiKeyUrl =
-            "https://{0}/api/discussion?query_resource=/api/source_vuln/{1}&page:limit=50&page:offset=0&page:order_by=created_asc&display_responses=1&_=1421980580382&key={2}&format=json";
+            "https://{0}/api/discussion?query_resource=/api/source_vuln/{1}&page:limit=50&page:offset=0&page:order_by=created_desc&display_responses=1&_=1421980580382&key={2}&format=json";
 
         /// <summary>
         ///     Post Question URL
