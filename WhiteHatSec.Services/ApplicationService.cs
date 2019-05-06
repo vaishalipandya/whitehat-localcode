@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System.Configuration;
 using System.IO;
 using System.Net;
 using WhiteHatSec.Entity;
@@ -22,11 +23,23 @@ namespace WhiteHatSec.Services
             ApplicationDetail.ApplicationInfo application = new ApplicationDetail.ApplicationInfo();
             try
             {
-                sentinelServerUrl = Constant.CleanUrl(sentinelServerUrl);
-                string applicationByApiKeyurl = string.Format(Constant.AppsByApiKeyUrl, sentinelServerUrl, apiKey);
-                applicationByApiKeyurl += Constant.getMetricsString();
-
+                string applicationByApiKeyurl = string.Empty;
+                sentinelServerUrl = Constant.CleanUrl(sentinelServerUrl);            
+                string IsUseHeaderval = Settings1.Default.IsUseHeader;
+                if (IsUseHeaderval == "True") {
+                    applicationByApiKeyurl = string.Format(Constant.AppsByCookieUrl, sentinelServerUrl);
+                    applicationByApiKeyurl += Constant.getMetricsString();                 
+                }
+                else
+                {
+                    applicationByApiKeyurl = string.Format(Constant.AppsByApiKeyUrl, sentinelServerUrl, apiKey);
+                    applicationByApiKeyurl += Constant.getMetricsString();
+                }                          
                 HttpWebRequest applicationByApiKeyRequest = WebRequest.CreateHttp(applicationByApiKeyurl);
+                if (IsUseHeaderval == "True")
+                {
+                    applicationByApiKeyRequest.Headers.Add("key", apiKey);                   
+                }
                 applicationByApiKeyRequest.AllowAutoRedirect = false;
                 applicationByApiKeyRequest.ContentType = Constant.ContentType;
                 applicationByApiKeyRequest.UserAgent = Constant.UserAgent;
