@@ -243,7 +243,7 @@ namespace WhiteHatSec.UnitTest
             searchVuln.SearchWhiteHatWindow = new VSIX.UserControls.WhsMainWindow();
             searchVuln.SearchWhiteHatWindow.GetDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             searchVuln.SearchWhiteHatWindow.GetDetailsToolStripMenuItem.Checked = false;
-            var vulnData = searchVuln.GetVulnDetailsInfo("240689");
+            var vulnData = searchVuln.GetVulnDetailsInfo("399983");
             Assert.NotNull(vulnData);
         }
 
@@ -298,5 +298,20 @@ namespace WhiteHatSec.UnitTest
             searchVuln.BindAppVuln(appsVulnCollection);
             //Assert.IsNotEmpty(searchVuln.ColumnApps.DataPropertyName);
         }
+        [Test]
+        public void SearchAppVulnTest()
+        {
+            BaseControl.BaseInstance.SentinelServerName = "sentinel.whitehatsec.com";
+            BaseControl.BaseInstance.ApiKey = "2e2f0e37-6fec-4a55-b193-888a19ced149";
+            BaseControl.BaseInstance.IsAuthenticatedByApiKey = true;
+            string appId = "9532";
+            string vulnId = "399983";
+            string state = "Open";
+            string severity = "All";
+            string fromDate = string.Empty;
+            string toDate = string.Empty;
+            searchVuln.SearchAppVuln(appId, vulnId, state, severity, fromDate, toDate);        
+        }
+
     }
 }

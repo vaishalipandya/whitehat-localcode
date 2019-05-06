@@ -135,5 +135,24 @@ namespace WhiteHatSec.UnitTest
             var count = qa.treeGridViewQAFilter.Nodes.Count;
             Assert.AreEqual(32, count);
         }
+        [Test]
+        public void SubmitQuestionTest()
+        {
+            BaseControl.BaseInstance.SentinelServerName = "sentinel.whitehatsec.com";
+            BaseControl.BaseInstance.ApiKey = "2e2f0e37-6fec-4a55-b193-888a19ced149";
+            BaseControl.BaseInstance.IsAuthenticatedByApiKey = true;
+            BaseControl.BaseInstance.SentinelCookie = null;
+            BaseControl.BaseInstance.ActiveVulnId = "399983";
+            string question = "submit queation from test11";         
+            qa.SubmitQuestion(question);
+            var count = qa.treeGridViewQAFilter.Nodes.Count;
+            Assert.AreEqual(count, count);
+        }
+        [Test]
+        public void ShowAskQuestionTest()
+        {
+            string ActiveVulnId = "399983";
+            qa.ShowAskQuestion(ActiveVulnId);
+        }
     }
 }
