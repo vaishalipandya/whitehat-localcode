@@ -26,13 +26,24 @@ namespace WhiteHatSec.Services
         {
             sentinelServerUrl = Constant.CleanUrl(sentinelServerUrl);
             string questionAnswerUrl;
-
-
-            questionAnswerUrl = apiKey == string.Empty ? string.Format(Constant.QuestionAnswerCookieUrl, sentinelServerUrl, vulnId) : 
-                string.Format(Constant.QuestionAnswerApiKeyUrl, sentinelServerUrl, vulnId, apiKey);
-            questionAnswerUrl += Constant.getMetricsString();
+            string IsUseHeaderval = Settings1.Default.IsUseHeader;
+            if (IsUseHeaderval == "True")
+            {
+                questionAnswerUrl = string.Format(Constant.QuestionAnswerCookieUrl, sentinelServerUrl, vulnId); 
+                questionAnswerUrl += Constant.getMetricsString();
+            }
+            else {
+                questionAnswerUrl = apiKey == string.Empty ? string.Format(Constant.QuestionAnswerCookieUrl, sentinelServerUrl, vulnId) :
+                        string.Format(Constant.QuestionAnswerApiKeyUrl, sentinelServerUrl, vulnId, apiKey);
+                questionAnswerUrl += Constant.getMetricsString();
+            }
+            
 
             HttpWebRequest questionAnswerRequest = WebRequest.CreateHttp(questionAnswerUrl);
+            if (IsUseHeaderval == "True")
+            {
+                questionAnswerRequest.Headers.Add("key", apiKey);             
+            }
             if (sentinelCookies!=null)
                 questionAnswerRequest.CookieContainer = sentinelCookies;
             questionAnswerRequest.AllowAutoRedirect = false;
@@ -69,11 +80,22 @@ namespace WhiteHatSec.Services
         {
             sentinelServerUrl = Constant.CleanUrl(sentinelServerUrl);
             string postQuestionUrl;
-
-            postQuestionUrl = apiKey == string.Empty ? string.Format(Constant.PostQuestionCookieUrl, sentinelServerUrl) :
+            string IsUseHeaderval = Settings1.Default.IsUseHeader;
+            if (IsUseHeaderval == "True")
+            {
+                postQuestionUrl = string.Format(Constant.PostQuestionCookieUrl, sentinelServerUrl);
+            }
+            else {
+                postQuestionUrl = apiKey == string.Empty ? string.Format(Constant.PostQuestionCookieUrl, sentinelServerUrl) :
                 string.Format(Constant.PostQuestionApiKeyUrl, sentinelServerUrl, apiKey);
+            }
+                
             //postQuestionUrl+= Constant.getMetricsString();
             HttpWebRequest postQuestionRequest = WebRequest.CreateHttp(postQuestionUrl);
+            if (IsUseHeaderval == "True")
+            {
+                postQuestionRequest.Headers.Add("key", apiKey);              
+            }
             if (sentinelCookies != null)
             {
                 postQuestionRequest.CookieContainer = sentinelCookies;

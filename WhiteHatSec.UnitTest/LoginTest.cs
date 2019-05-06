@@ -12,7 +12,7 @@ namespace WhiteHatSec.UnitTest
     {
         public static CookieContainer cookieContainer = new CookieContainer();
         private readonly Login login = new Login();
-
+      
         [Test]
         public void CheckWithEmptyServerNameTest()
         {
@@ -84,5 +84,52 @@ namespace WhiteHatSec.UnitTest
             login.ValidateApiKey(apikey);
             Assert.IsTrue(BaseControl.BaseInstance.IsAuthenticatedByApiKey);
         }
+        [Test]
+        public void ValidateApiKeyEmptyTest()
+        {
+            login.serverTextBox = new TextBox();
+            login.serverTextBox.Text = "sentinel.whitehatsec.com";          
+            login.ValidateApiKey(string.Empty);
+            Assert.IsFalse(BaseControl.BaseInstance.IsAuthenticatedByApiKey);
+        }
+        [Test]
+        public void ValidateApiKeyWrongTest()
+        {
+            login.serverTextBox = new TextBox();
+            login.serverTextBox.Text = "sentinel.whitehatsec.com";
+            var apikey = "34f2b9a3-d288-429e-a712-3a7d30acdcdcddcdc8853b";
+            BaseControl.BaseInstance.AppsDetail = null;           
+            login.ValidateApiKey(apikey);
+            Assert.IsFalse(BaseControl.BaseInstance.IsAuthenticatedByApiKey);
+        }
+
+        [Test]
+        public void GetApplicationsTest()
+        {
+            var server = "sentinel.whitehatsec.com";
+            var data =  login.GetApplications(server,null);
+            Assert.AreEqual(null, data.Collection);
+        }
+        [Test]
+        public void ValidateUserTest()
+        {
+          
+            var username = "spandan.prajapati@einfochips.com";
+            var password = "Spandan123";
+            login.serverTextBox.Text = "sentinel.whitehatsec.com";        
+            var data = login.ValidateUser(username,password);
+            Assert.AreEqual(data, data);
+        }
+        [Test]
+        public void ValidateWrongUserTest()
+        {        
+            var username = "spandan.prajapati@einfochips.com";
+            var password = "Spandan";
+            login.serverTextBox.Text = "sentinel.whitehatsec.com";
+            var data = login.ValidateUser(username, password);
+            Assert.AreEqual(data, data);
+        }
+
+
     }
 }

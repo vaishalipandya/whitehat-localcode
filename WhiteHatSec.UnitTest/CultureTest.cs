@@ -18,5 +18,13 @@ namespace WhiteHatSec.UnitTest
             string cultureName = cultureInfo.Name;
             Assert.AreEqual("de", cultureName);
         }
+        [Test]
+        public  void GetVulnDetailTest()
+        {
+            string vulnId = "399983";        
+            string sentinelServer = "sentinel.whitehatsec.com";
+            var Data =  whsMainWindow.GetVulnDetail(vulnId, sentinelServer);
+        }
+       
     }
 }
